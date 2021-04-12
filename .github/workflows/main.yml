@@ -38,3 +38,4 @@ jobs:
           static_list: "autopenwrt" #同步的项目
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }} #同步到gitee使用，需要在github的secrets里添加GITEE_TOKEN
+          clone_style: "ssh"
