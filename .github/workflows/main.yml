@@ -33,9 +33,12 @@ jobs:
         uses: Yikun/hub-mirror-action@master #使用Yikun的代码，不用修改
         if: env.dst_key
         with:
-          src: github/lansi1d #源名称
-          dst: gitee/lansild #目标名称
-          static_list: "autopenwrt" #同步的项目
+          src: github/lansi1d
+          #源名称
+          dst: gitee/lansild
+          #目标名称
+          static_list: "autopenwrt"
+          #同步的项目
           dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
           dst_token: ${{ secrets.GITEE_TOKEN }} #同步到gitee使用，需要在github的secrets里添加GITEE_TOKEN
-          clone_style: "ssh"
+      
