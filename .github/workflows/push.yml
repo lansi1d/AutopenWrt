@@ -1,10 +1,4 @@
-on: push
-name: Tests / test-user-mirror
-jobs:
-  run:
-    name: Run
-    runs-on: ubuntu-latest
-    steps:
+steps:
 - name: Mirror the Github organization repos to Gitee.
   uses: Yikun/hub-mirror-action@master
   with:
