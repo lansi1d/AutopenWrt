@@ -28,17 +28,3 @@ jobs:
           source_branch: "master" #此处双方分支必须填对
           destination_branch: "main" #运行在master分支同步到main分支，以免脚本被覆盖
           github_token: ${{ github.event.client_payload.PAT || secrets.PAT }}
-      # 同步到gitee使用
-#      - name: sync github -> gitee
- #       uses: Yikun/hub-mirror-action@master #使用Yikun的代码，不用修改
-  #      if: env.dst_key
-   #     with:
-    #      src: github/lansi1d
-     #     #源名称
-      #    dst: gitee/lansild
-       #   #目标名称
-        #  static_list: "autopenwrt"
-         # #同步的项目
-          #dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-          #dst_token: ${{ secrets.GITEE_TOKEN }} #同步到gitee使用，需要在github的secrets里添加GITEE_TOKEN
-      
