@@ -1,0 +1,17 @@
+on: push
+name: Tests / test-user-mirror
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+- name: Mirror the Github organization repos to Gitee.
+  uses: Yikun/hub-mirror-action@master
+  with:
+        src: github/lansi1d 
+        dst: gitee/lansild
+        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+        dst_token:  ${{ secrets.GITEE_TOKEN }}
+        static_list: 'autopenwrt'
+        force_update: true
+        debug: true
